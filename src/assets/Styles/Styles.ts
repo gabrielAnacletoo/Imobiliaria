@@ -267,11 +267,11 @@ border-radius:3px;
 `
 
 export const BadgeRegister = styled.div`
-background-color: #c4c4c4;
+background-color: #dbdbdb;
 display:flex;
 justify-content: flex-start;
 align-items: center;
-height: 150px;
+height: 125px;
 
 p{
 margin-left:6%;
@@ -327,3 +327,104 @@ font-size:0.9em;
 }
 `
 
+export const ContainerEmpresa = styled.div`
+width: 100%;
+display:flex;
+flex-direction: column;
+align-items:center;
+justify-content:center;
+p{
+display:flex;
+color: #FFF;
+align-items: center;
+padding-left:5%;
+width: 100%;
+font-size:1.1em;
+height: 125px;
+background-color: #dbdbdb;
+margin-bottom:3%;
+font-weight: 500;
+}
+`
+
+export const EmpresaContent = styled.div`
+display:flex;
+width:90%;
+flex-direction:row;
+align-items:space-between;
+justify-content:center;
+border:1px solid #dbdbdb;
+margin-bottom:5%;
+padding:1%;
+button{
+margin-top:3%;
+padding: 3.5% 3.5%;
+background-color: #b5a73a;
+border:none;
+color: #FFF;
+font-size:0.9em;
+font-weight:600;
+cursor:pointer;
+}
+`
+export const FaleConoscoContainer = styled.div`
+display:flex;
+width:100%;
+flex-direction:column;
+align-items: center;
+justify-content: space-between;
+margin-bottom:5%;
+p{
+display:flex;
+color: #FFF;
+align-items: center;
+padding-left:5%;
+width: 100%;
+font-size:1.1em;
+height: 125px;
+background-color: #dbdbdb;
+margin-bottom:3%;
+font-weight: 500;
+}
+`
+
+export const DivForm = styled.div`
+display:flex;
+align-items: center;
+justify-content: space-around;
+width: 80%;
+`
+
+export const FaleConosco = styled.div`
+display: flex;
+align-items:flex-start;
+flex-direction: column;
+justify-content: flex-start;
+padding: 3%;
+background-color: #dbdbdb;
+width: 100%;
+margin: 1%;
+input{
+padding:1%;
+width:100%;
+margin: 0.5%;
+}
+select {
+width:100%;
+padding: 1%;
+margin: 0.5%;
+}
+textarea {
+margin: 0.5%;
+}
+`
+
+export const Setores = styled.div`
+display: flex;
+align-items:center;
+justify-content: center;
+background-color: #dbdbdb;
+width: 50%;
+margin: 1%;
+padding: 3%;
+`

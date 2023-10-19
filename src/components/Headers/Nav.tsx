@@ -1,32 +1,33 @@
 import * as S from '../../assets/Styles/Styles.js';
 import Logo from '../../assets/Images/logo.png';
 import { Link, useNavigate } from "react-router-dom";
-import React from 'react';
+import React, {ReactNode }from 'react';
 
-const Nav = () => {
-const navigate = useNavigate();
-const HandleHome = () => {
-    navigate('/')
-}
+
+interface NavProps {
+    handleNavigation: (page: string | null) => void;
+  }
+  
+  const Nav = ({ handleNavigation }: NavProps) => {
+    const navigate = useNavigate();
+
+  
     return (
-        <>
+      <>
         <S.NavHeader>
-       <img src={Logo} onClick={HandleHome} className='Logo'/>  
-        <ul>
-            <li>Empresa</li>
-            {/* <li>Favoritos</li> */}
-            <li>Contato</li>
-            <li>Lançamentos</li>
-        </ul>
-
-        <S.UserDivHeader>
-         <Link to="/register">Cadastro</Link>   
-         {/* <Link to="/Login">Login</Link>    */}
-        </S.UserDivHeader>
-        
+          <img src={Logo} onClick={() => handleNavigation(null)} className='Logo'/>  
+          <ul>
+            <li onClick={() => handleNavigation('empresa')}>Empresa</li>
+            <li onClick={() => handleNavigation('contato')}>Contato</li>
+            <li onClick={() => handleNavigation('lancamentos')}>Lançamentos</li>
+          </ul>
+  
+          <S.UserDivHeader>
+            <Link to="/register">Cadastro</Link>   
+          </S.UserDivHeader>
         </S.NavHeader>
-        </>
+      </>
     );
-};
+  };
 
 export default Nav;

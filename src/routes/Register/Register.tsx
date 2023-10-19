@@ -2,7 +2,10 @@ import Nav from '../../components/Headers/Nav';
 import * as S from '../../assets/Styles/Styles';
 import Footer from '../../components/Footer/Footer';
 
-
+interface NavProps {
+    handleNavigation: (page: string | null) => void;
+  }
+  
 const Register = () => {
     return (
         <>
